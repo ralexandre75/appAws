@@ -10,6 +10,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')));
 
 
 mongoose.connect('mongodb://ralexandreessaiaws:Saj9VrY2dz2XWjGkPqUm@ds141654.mlab.com:41654/essaiaws', {}, (err) => {
